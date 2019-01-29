@@ -27,4 +27,6 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
+    implementation 'io.rsocket:rsocket-core:0.11.14'
+    implementation 'io.rsocket:rsocket-transport-netty:0.11.14'
 }
