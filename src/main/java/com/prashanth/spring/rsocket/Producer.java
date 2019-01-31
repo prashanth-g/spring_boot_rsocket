@@ -10,11 +10,26 @@ import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.time.Duration;
+import java.time.Instant;
+import java.util.function.Supplier;
+import java.util.stream.Stream;
+
 @Component
 public class Producer implements Ordered, ApplicationListener<ApplicationReadyEvent> {
+
     @Override
     public int getOrder() {
         return Ordered.HIGHEST_PRECEDENCE;
+    }
+
+    Flux<String> notifications(String name) {
+        return Flux.fromStream(Stream.generate(new Supplier<String>() {
+            @Override
+            public String get() {
+                return "Halo - "+name+" "+ Instant.now().toString();
+            }
+        })).delayElements(Duration.ofSeconds(1));
     }
 
     @Override

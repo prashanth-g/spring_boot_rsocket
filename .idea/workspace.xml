@@ -54,12 +54,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/prashanth/spring/rsocket/Producer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+            <state relative-caret-position="295">
+              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#164#165#0" expanded="true" />
                 <element signature="e#188#189#0" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
+                <element signature="e#1001#1002#0" expanded="true" />
                 <element signature="e#963#1160#0" expanded="true" />
                 <element signature="e#1159#1160#0" expanded="true" />
               </folding>
@@ -142,7 +144,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549206423794" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549206653127" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -290,12 +292,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/prashanth/spring/rsocket/Producer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        <state relative-caret-position="295">
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#164#165#0" expanded="true" />
             <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#1001#1002#0" expanded="true" />
             <element signature="e#963#1160#0" expanded="true" />
             <element signature="e#1159#1160#0" expanded="true" />
           </folding>
