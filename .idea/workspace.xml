@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6661c6b7-f36c-4d74-ba94-0674b4b26748" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prashanth/spring/rsocket/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prashanth/spring/rsocket/Producer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -54,16 +53,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/prashanth/spring/rsocket/Producer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+            <state relative-caret-position="335">
+              <caret line="40" column="64" lean-forward="true" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#164#165#0" expanded="true" />
                 <element signature="e#188#189#0" expanded="true" />
                 <element signature="e#920#921#0" expanded="true" />
                 <element signature="e#1001#1002#0" expanded="true" />
-                <element signature="e#963#1160#0" expanded="true" />
-                <element signature="e#1159#1160#0" expanded="true" />
+                <element signature="e#1769#1770#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -144,7 +142,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549206653127" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549206980020" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -292,16 +290,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/prashanth/spring/rsocket/Producer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+        <state relative-caret-position="335">
+          <caret line="40" column="64" lean-forward="true" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#164#165#0" expanded="true" />
             <element signature="e#188#189#0" expanded="true" />
             <element signature="e#920#921#0" expanded="true" />
             <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#963#1160#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1769#1770#0" expanded="true" />
           </folding>
         </state>
       </provider>

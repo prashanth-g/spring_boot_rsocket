@@ -2,8 +2,8 @@ package com.prashanth.spring.rsocket;
 
 import io.rsocket.*;
 import io.rsocket.transport.netty.server.TcpServerTransport;
+import io.rsocket.util.DefaultPayload;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
@@ -40,7 +40,8 @@ public class Producer implements Ordered, ApplicationListener<ApplicationReadyEv
             public Mono<RSocket> accept(ConnectionSetupPayload setup, RSocket sendingSocket) {
                 AbstractRSocket abstractRSocket = new AbstractRSocket() {
                     public Flux<Payload> requestStream(Payload payload) {
-                        return super.requestStream(payload);
+                        return notifications(payload.getDataUtf8())
+                                .map(DefaultPayload::create);
                     }
                 };
                 return Mono.just(abstractRSocket);
