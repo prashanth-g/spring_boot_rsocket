@@ -1,0 +1,4 @@
+
+Ÿsquid:S1186
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ª’Ñ8şûÀŸ‹-
+ssquid:UselessImportCheck"IRemove this unused import 'org.springframework.context.ApplicationEvent'.(È±8³ÀŸ‹-

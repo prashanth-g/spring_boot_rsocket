@@ -12,7 +12,6 @@ import reactor.core.publisher.Mono;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 @Component
@@ -24,20 +23,15 @@ public class Producer implements Ordered, ApplicationListener<ApplicationReadyEv
     }
 
     Flux<String> notifications(String name) {
-        return Flux.fromStream(Stream.generate(new Supplier<String>() {
-            @Override
-            public String get() {
-                return "Halo - "+name+" "+ Instant.now().toString();
-            }
-        })).delayElements(Duration.ofSeconds(1));
+        return Flux
+                .fromStream(Stream.generate(() -> "Halo - "+name+" "+ Instant.now().toString()))
+                .delayElements(Duration.ofSeconds(1));
     }
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
 
-        SocketAcceptor socketAcceptor = new SocketAcceptor() {
-            @Override
-            public Mono<RSocket> accept(ConnectionSetupPayload setup, RSocket sendingSocket) {
+        SocketAcceptor socketAcceptor = (connectionSetupPayload, sender) -> {
                 AbstractRSocket abstractRSocket = new AbstractRSocket() {
                     public Flux<Payload> requestStream(Payload payload) {
                         return notifications(payload.getDataUtf8())
@@ -45,9 +39,9 @@ public class Producer implements Ordered, ApplicationListener<ApplicationReadyEv
                     }
                 };
                 return Mono.just(abstractRSocket);
-            }
         };
-        TcpServerTransport tcpServerTransport = TcpServerTransport.create(700);
+
+        TcpServerTransport tcpServerTransport = TcpServerTransport.create(7000);
         RSocketFactory
                 .receive()
                 .acceptor(socketAcceptor)
