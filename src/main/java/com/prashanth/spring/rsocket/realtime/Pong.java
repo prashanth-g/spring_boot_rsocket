@@ -2,6 +2,7 @@ package com.prashanth.spring.rsocket.realtime;
 
 import io.rsocket.*;
 import io.rsocket.transport.netty.server.TcpServerTransport;
+import io.rsocket.util.DefaultPayload;
 import lombok.extern.log4j.Log4j2;
 import org.reactivestreams.Publisher;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -23,11 +24,12 @@ public class Pong implements SocketAcceptor, Ordered, ApplicationListener<Applic
             public Flux<Payload> requestChannel(Publisher<Payload> payloads) {
                 return Flux.from(payloads)
                         .map(Payload::getDataUtf8)
-                        .doOnNext(str -> log.info("received "+str+ "in "+getClass().getName())).map(null);
-
+                        .doOnNext(str -> log.info("received "+str+ "in "+getClass().getName()))
+                        .map(PingPongApplication::reply)
+                        .map(DefaultPayload::create);
             }
         };
-        return null;
+        return Mono.just(abstractRSocket);
     }
 
     @Override
